@@ -1,0 +1,153 @@
+/*
+我有一条神奇的小尾巴ฏ๎๎๎๎๎๎๎๎๎ฏ๎ฏด้้้้้็็็็็้้้้้็็็็็้้้้้็็็้็็็ฏ๎็็็็็็oด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็ ฏ๎๎๎๎๎๎๎๎๎ฏ๎ฏด้้้้้็็็็็้้้้้็็็็็้้้้้็็็้็็็ฏ๎็็็็็็oด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็&#45;&#45;..
+=====================================================
+*           本样式表为刘勇同学专用样式表                  *
+*            QQ:2637368579;                         *
+*            TEL:138 9101 4014;                     *
+=====================================================
+*/
+
+/*
+=====================================================
+清除默认样式
+=====================================================
+*/
+/* 设置默认字体 */
+body,
+button, input, select, textarea {
+    font: 12px/1 '微软雅黑', Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+
+}
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td  {/* table elements 表格元素 */
+    margin: 0px;
+    line-height: 1;
+    padding: 0;
+
+}
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+
+img, button, input {
+    border: 0px;
+}
+/* 重置文本格式元素 */
+a { text-decoration: none;display: inline-block;
+}
+a:hover { text-decoration: underline; }
+a{
+    text-decoration:none;
+    color:#333;
+}
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+button, input, select, textarea {
+    outline: none;
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+/*
+==========================
+文本溢出
+==========================
+*/
+.text-overflow-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-overflow-2 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+    overflow: hidden; /** 隐藏超出的内容 **/
+}
+
+.text-overflow-3 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.text-overflow-4 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-overflow-5 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+.text-overflow-6 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+}
+
+/*
+==========================
+居中
+==========================
+*/
+.centerCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

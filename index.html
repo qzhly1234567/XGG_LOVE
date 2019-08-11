@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱你的小勇勇</title>
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="./static/js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<audio autoplay="autoplay" id="audio" preload="auto"
+       src="https://webfs.yun.kugou.com/201908111655/94b4cde22fd45ffd6b79e9c78dbe6386/G083/M08/00/04/84YBAFhks0aAYGsBADl8RUL2DXQ825.mp3"
+       controls="controls">
+</audio>
+<div id="app">
+
+</div>
+<script>
+
+    $(window).on('click', function () {
+        $('#audio').get(0).play()
+    })
+
+
+
+
+
+    const ONE_YEAR = 31536000000;//年
+    const ONE_MONTH = 2592000000;//月
+    const ONE_DAY = 86400000;//日
+    const ONE_HOUR = 3600000;//时
+    const ONE_MINUTE = 60000;//分
+    const ONE_SECOND = 1000;//秒
+
+
+    function getDate(){
+        let startDate = 1485532800000;
+        let endDate = new Date().getTime();
+        let diffDate = null;
+        if (startDate > endDate) {
+            diffDate = startDate - endDate;
+        } else {
+            diffDate = endDate - startDate;
+        }
+        // console.log(diffDate);
+        let Y = Math.floor(diffDate / ONE_YEAR)
+        let Ys = diffDate - ONE_YEAR * Y;
+
+        let M = Math.floor(Ys / ONE_MONTH);
+        let Ms = Ys - ONE_MONTH * M;
+
+        let D = Math.floor(Ms / ONE_DAY);
+        let Ds = Ms - ONE_DAY * D;
+
+        let h = Math.floor(Ds / ONE_HOUR);
+        let hs = Ds - ONE_HOUR * h;
+
+        let m = Math.floor(hs / ONE_MINUTE);
+        let ms = hs - ONE_MINUTE * m;
+
+        let s = Math.floor(ms / ONE_SECOND);
+        let ss = ms - ONE_SECOND * s;
+        //
+        // console.log("年", Y);
+        // console.log("月", M);
+        // console.log("日", D);
+        // console.log("时", h);
+        // console.log("分", m);
+        // console.log("秒", s);
+        // console.log("豪秒", ss);
+        let str = `
+<div class="title">亲爱的小果果：</div>
+<div class="content">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们已经在一起${Y}年${M}个月${D}天${h}小时${m}分${s}秒${ss}毫秒了,我希望这个数字是永远，<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;虽然我有很多的问题邋里邋遢爱发脾气还是个杠精，经常惹你生气，（我真的不知道自己错哪了！呜呜！）但我会慢慢改变的，也请你给我多一些耐心和爱心。就让这个网页做我们的见证吧！爱你呦么么哒！<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;山无陵，天地合，乃敢与君绝<br>
+
+
+</div>
+<div class="footer">
+—— 爱你的小勇勇
+</div>
+
+    `
+
+        return str
+    }
+
+
+    setInterval(function () {
+        $('#app').html(getDate())
+    }, 10)
+
+
+</script>
+
+</body>
+</html>
