@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./static/css/index.css">
     <script src="./static/js/jquery-3.2.1.js"></script>
 </head>
-<body style="background: url('static/images/a.jpg')center center no-repeat / cover">
+<body style="background: url('static/images/a.jpg')center center no-repeat">
 <audio autoplay="autoplay" id="audio" preload="auto"
-       src="https://webfs.yun.kugou.com/201908111655/94b4cde22fd45ffd6b79e9c78dbe6386/G083/M08/00/04/84YBAFhks0aAYGsBADl8RUL2DXQ825.mp3"
+       src="./static/GNZW.mp3"
        controls="controls">
 </audio>
 <div id="app">
@@ -23,9 +23,6 @@
     $(window).on('click', function () {
         $('#audio').get(0).play()
     })
-
-
-
 
 
     const ONE_YEAR = 31536000000;//年
